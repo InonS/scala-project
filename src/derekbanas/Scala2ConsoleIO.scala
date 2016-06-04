@@ -6,7 +6,7 @@ import scala.io.StdIn.{readLine, readInt}
 /**
   * Created by admin on 2016-05-30.
   */
-object Scala2IO {
+object Scala2ConsoleIO {
   def main(args: Array[String]) {
     var numberGuess = 0
 
@@ -14,6 +14,7 @@ object Scala2IO {
     do {
       print("Guess a number ")
       numberGuess = readLine.toInt
+      // numberGuess = readInt
     } while (numberGuess != 15)
 
     // explicit C-style printf
@@ -38,7 +39,7 @@ object Scala2IO {
     println(f"I am under ${age + 1} and weigh exactly $weight%.2f")
 
 
-    var randSentence = "I saw a dragon fly by"
+    val randSentence = "I saw a dragon fly by"
 
     // String as zero-based Char array
     println("3rd index: " + randSentence(3))

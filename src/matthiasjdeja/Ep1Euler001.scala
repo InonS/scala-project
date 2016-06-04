@@ -20,7 +20,7 @@ package matthiasjdeja
   * 1. Cannot be instantiated
   * 2. Cannot be inherited
   */
-object Euler001 {
+object Ep1Euler001 {
 
   /** No public or static keywords. Public is default, static is inferred by context.
     * Generics are written in square brackets, because angular brackets are used for native, explicit XML support

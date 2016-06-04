@@ -1,14 +1,16 @@
 package matthiasjdeja
 
+
+
 /**
   * Created by admin on 2016-06-04.
   *
-  * 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+  * 2&#94;15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
   *
-  * What is the sum of the digits of the number 2^1000?
+  * What is the sum of the digits of the number 2&#94;1000?
   *
   */
-object Euler016 {
+object Ep4Euler016 {
 
   def main(args: Array[String]) {
 

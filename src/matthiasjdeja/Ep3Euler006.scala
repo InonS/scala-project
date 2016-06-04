@@ -6,7 +6,7 @@ import scala.collection.immutable.Range.Inclusive
   * Created by admin on 2016-06-04.
   *
   * The sum of the squares of the first ten natural numbers is,
-  * 1^2 + 2^2 + ... + 10^2 = 385
+  * 1^2 + 2^2 + ... + 10&#94;2 = 385
   *
   * The square of the sum of the first ten natural numbers is,
   * (1 + 2 + ... + 10)^2 = 55^2 = 3025
@@ -16,7 +16,7 @@ import scala.collection.immutable.Range.Inclusive
   * Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
   *
   */
-object Euler006 {
+object Ep3Euler006 {
   def main(args: Array[String]) {
     println(functionalVersion)
   }

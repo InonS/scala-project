@@ -12,7 +12,7 @@ package matthiasjdeja
   * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
   *
   */
-object Euler002 {
+object Ep2Euler002 {
 
   def main(args: Array[String]) {
     val sum = functionalVersion()

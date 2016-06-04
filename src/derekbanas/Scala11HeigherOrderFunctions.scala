@@ -8,7 +8,7 @@ import scala.math.log10
 object Scala11HeigherOrderFunctions {
   def main(args: Array[String]) {
 
-    val log10func = log10 _ // dummy variable needed to specity that the object referred to is the function, 'log10()'
+    val log10func = log10 _ // implicit parameter (`_`) needed to specify that we are referring to the the function, 'log10()', as a function object, and not invoking it right now.
     println(log10func(1000))
 
     // map

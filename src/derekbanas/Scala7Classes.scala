@@ -44,7 +44,11 @@ object Scala7Classes {
     }
   }
 
-  // (static) companion object to Animal class
+  /**
+    * companion object to Animal class:
+    * A Singleton holding all static class members & methods.
+    * The class definition holds all instance members & methods.
+    */
   object Animal {
     private var idNumber = 0
 

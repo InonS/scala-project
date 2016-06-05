@@ -54,8 +54,6 @@ object Ep5Euler008 {
 
         // match-all
         case _ => 0
-
-        // you can create your own extractors!
       }
 
     }
@@ -64,4 +62,19 @@ object Ep5Euler008 {
     val l: List[Int] = num.toCharArray.map(_.asDigit).toList
     println(greatestProduct(l))
   }
+
+  /**
+    * you can create your own extractors!
+    *
+    * @param n ctor. argument
+    */
+  case class MyCaseClass(n: Int) {}
+
+  /**
+    * case classes get some extra features as compared with regular classes. For example:
+    * 1. default getters for ctor. arguments
+    * 2. factory method in companion object
+    */
+  val myInstance = MyCaseClass(1).n
+
 }

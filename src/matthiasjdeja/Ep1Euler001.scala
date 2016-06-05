@@ -37,12 +37,16 @@ object Ep1Euler001 {
     var sum: Int = 0 // Int has methods in Scala, but is primitive in bytecode
     for (n <- 1 until 1000)
     /*
-      no C `for` statement in Scala, i.e. `for (int i = 0 ; i < imax ; ++i)`
-      n's type is inferred.
-      `<-` is iteration syntax.
-      Scala Stream is similar to a Python generator, allowing to work with sequences of unknown length (even infinitely long).
-      `until` is end-exclusive (like xrange), `to` is end-inclusive
-      Period corrector (`.`) and function call parens are inferred (operator syntax / infix notation), IFF it is unambiguous: A single object method call taking a single parameter
+      1. no C `for` statement in Scala, i.e. `for (int i = 0 ; i < imax ; ++i)`
+      2. n's type is inferred.
+      3. `<-` is iteration syntax.
+      4. Scala Stream is similar to a Python generator, allowing to work with sequences of unknown length (even infinitely long).
+      5. `until` is end-exclusive (like xrange), `to` is end-inclusive
+      6. Period corrector (`.`) and function call parens are inferred (operator syntax / infix notation), or can be equivalently replaced by a code block (curly braces), IFF it is unambiguous: A function call taking a single parameter.
+          For example, the following method calls are equivalent:
+            1. myClass.myMethod(myParam)
+            2. myClass myMethod myParam
+            3. myClass myMethod { /* some code which returns myParam */}
      */
       if (n % 3 == 0 || n % 5 == 0) sum += n
     sum

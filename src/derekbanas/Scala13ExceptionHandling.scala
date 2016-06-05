@@ -3,7 +3,7 @@ package derekbanas
 /**
   * Created by admin on 2016-06-04.
   */
-object ExceptionHandling {
+object Scala13ExceptionHandling {
   def main(args: Array[String]) {
     // divison by zero
     def divideNums(num1: Int, num2: Int) = {

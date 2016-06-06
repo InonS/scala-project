@@ -13,7 +13,12 @@ object Scala3Functions {
 
     println("5 + 4 = " + getSum(5, 4) + " = 4 + 5 = " + getSum(num2 = 4, num1 = 5))
 
-    // a Function that does not return anything is called a Procedure
+    /**
+      * a Function that does not return anything is called a Procedure.
+      * It has return type Unit, but this specification (along with the following equals sign) can be given up: {{{def sayHi(numTimes: Int = 1) { /* procedure body... */ } }}}
+      *
+      * @param numTimes
+      */
     def sayHi(numTimes: Int = 1): Unit = {
       var i = 0
       while (i < numTimes) {
@@ -30,7 +35,7 @@ object Scala3Functions {
       for (num <- args) {
         sum += num
       }
-      sum // implicit return
+      sum // implicit return (same as for the last line in any code block)
     }
 
     println("sum is = " + getSums(1, 2, 3, 4, 5, 6))

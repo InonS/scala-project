@@ -10,7 +10,7 @@ import scala.io.Source
 object Scala12FileIO {
 
   def main(args: Array[String]) {
-    val writer = new PrintWriter("test.txt")
+    val writer = new PrintWriter("out/test.txt")
     writer.write("Just some random text;\nsome more random text.")
     writer.close()
 

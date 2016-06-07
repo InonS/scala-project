@@ -19,7 +19,7 @@ object Scala3Java {
   }
 
   class Generation(val liveCells: Set[Cell] = Set.empty) {
-    def next: Generation = new Generation(stayAlive ++ born)  // collection union is ++, XOR is +
+    def next: Generation = new Generation(stayAlive ++ born) // collection union is ++, XOR is +
 
     def stayAlive: Set[Cell] = liveCells filter isStayAlive
 

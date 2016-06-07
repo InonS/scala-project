@@ -1,4 +1,4 @@
-package matthiasjdeja
+package scala2matthiasjdeja
 
 /**
   * Created by admin on 2016-06-05.

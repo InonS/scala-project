@@ -1,4 +1,4 @@
-package craigtataryn
+package scala3craigtataryn
 
 /**
   * Created by admin on 2016-06-06.

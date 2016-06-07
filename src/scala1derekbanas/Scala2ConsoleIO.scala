@@ -1,4 +1,4 @@
-package derekbanas
+package scala1derekbanas
 
 import scala.io.StdIn.{readLine, readInt}
 

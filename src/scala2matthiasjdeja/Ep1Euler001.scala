@@ -1,4 +1,4 @@
-package matthiasjdeja
+package scala2matthiasjdeja
 
 /**
   * EOLN semicolons are inferred

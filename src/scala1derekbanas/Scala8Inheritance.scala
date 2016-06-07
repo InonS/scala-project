@@ -1,6 +1,6 @@
-package derekbanas
+package scala1derekbanas
 
-import derekbanas.Scala7Classes.Animal
+import scala1derekbanas.Scala7Classes.Animal
 
 /**
   * Created by admin on 2016-06-04.

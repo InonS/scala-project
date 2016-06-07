@@ -1,4 +1,4 @@
-package craigtataryn
+package scala3craigtataryn
 
 import scala.math._
 

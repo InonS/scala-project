@@ -1,4 +1,4 @@
-package matthiasjdeja
+package scala2matthiasjdeja
 
 import scala.collection.immutable.Range.Inclusive
 

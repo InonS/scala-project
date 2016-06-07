@@ -5,7 +5,12 @@ package scala3craigtataryn
   */
 object Scala5PatternMatching_Case {
   def main(args: Array[String]) {
-    // flexibility: (ad-hoc) case implements unapply method, used to unwrap user class fields, and perform matching on the known classes of these fields
+
+    /**
+      * flexibility: (ad-hoc) case implements unapply method,
+      * used to '''destructure''' user class into its separate fields,
+      * and perform matching on the known classes of these fields
+      */
     case class PersonName(fst: String, lst: String) {
       var first: String = fst
       var last: String = lst

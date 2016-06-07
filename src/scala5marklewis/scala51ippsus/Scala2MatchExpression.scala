@@ -42,7 +42,7 @@ object Scala2MatchExpression {
       }
 
       case _ => {
-        println("catch-all: pattern to match if " + expr + " not matched by any previous patterns")
+        println("catch-all: pattern to match if " + expr + " not matched by any previous patterns. Otherwise, " + expr + " would have caused a " + new MatchError(expr) + " to be thrown")
         /* ok, do something else completely... */
       }
     }

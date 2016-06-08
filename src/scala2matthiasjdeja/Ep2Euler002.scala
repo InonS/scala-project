@@ -49,7 +49,7 @@ object Ep2Euler002 {
 
       // how do we iterate through the sequence? (recursively!)
       def recurse(xmn1: Int, xn: Int): Stream[Int] =
-        Stream.cons(xmn1, recurse(xn, xmn1 + xn)) // concatenating an object with a Stream (a lazy parameter, infinite recursion is avoided)
+        Stream cons(xmn1, recurse(xn, xmn1 + xn)) // concatenating (cons, a.k.a. ::) an object with a Stream (a lazy parameter, infinite recursion is avoided). The cons operator is
 
       // return the initialized recursive sequence
       recurse(1, 2)

@@ -1,7 +1,5 @@
 package scala5marklewis.scala51ippsus
 
-import scala.collection.immutable
-
 /**
   * scala-project
   * Created by admin on 2016-06-08.
@@ -17,6 +15,16 @@ object Scala5ArrayAndListFunctions {
 
     println("List match sum:\n" + ListExample.matchOperationOnList(ListExample.lst, _ + _) + '\n')
     println("List match product:\n" + ListExample.matchOperationOnList(ListExample.lst, _ * _) + '\n')
+
+    /** other methods of appending n elements to a generally traversable instance [[scala.collection.GenTraversable]]
+      * (Array and List are just two subclasses):
+      *
+      * [[Array.fill]]] (takes Supplier) and
+      * [[List.tabulate]]] (takes function of index)
+      */
+    println(List.fill(3)(0))
+    println(List.tabulate(3)(_ => 0))
+    println(Array.tabulate(5)(i => i * (i + 1) / 2).toStream.mkString(","))
   }
 
   object ArrayExample {
@@ -30,10 +38,6 @@ object Scala5ArrayAndListFunctions {
     println(arr(1))
     arr(2) = 4
 
-    /** other methods of appending n elements to an array:
-      * [[Array.fill]]] (takes Supplier) and
-      * [[Array.tabulate]]] (takes function of index)
-      */
     println((arr toStream).mkString(","))
 
     def operateOnArray(arr: Array[Int], f: (Int, Int) => Int, start: Int = 0): Int = {
@@ -65,20 +69,23 @@ object Scala5ArrayAndListFunctions {
     println((lst toStream).mkString(","))
 
     def operateOnList(lst: List[Int], f: (Int, Int) => Int): Int = {
-      val head: Int = lst.head
-      val tail: List[Int] = lst.tail
+      val h: Int = lst.head
+      val t: List[Int] = lst.tail
 
       // base case: last two elements (since f is a binary function)
-      if (tail.tail == Nil) return f(head, tail.head)
-      f(head, operateOnList(tail, f))
+      println((t tail).toStream.mkString(","))
+      if (t.tail == Nil) return f(h, t.head)
+      f(h, operateOnList(t, f))
     }
 
     def matchOperationOnList(lst: List[Int], f: (Int, Int) => Int): Int = {
-      val tail: List[Int] = lst.tail
+      val h: Int = lst head
+      val t: List[Int] = lst tail
 
-      tail.tail match {
-        case Nil => f(lst.head, tail.head)
-        case h :: t => f(h, operateOnList(t, f)) // use cons pattern
+
+      t tail match {
+        case Nil => f(h, t head)
+        case _ :: _ => f(h, matchOperationOnList(t, f)) // use cons pattern to match a List
       }
     }
   }

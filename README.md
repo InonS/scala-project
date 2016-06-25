@@ -1,1 +1,1 @@
-# scala-project
+# YouTube Scala Tutorials Write-along

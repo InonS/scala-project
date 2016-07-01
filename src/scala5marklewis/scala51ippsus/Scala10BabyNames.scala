@@ -16,7 +16,6 @@ object Scala10BabyNames {
     (parts(1), parts(2) toInt, parts(3), parts(4) toInt) // skip state
   }
 
-
   def main(args: Array[String]) {
 
     val nameData: Iterator[NameData] = getNameData

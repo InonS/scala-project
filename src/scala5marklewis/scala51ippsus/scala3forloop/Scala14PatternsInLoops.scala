@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus
+package scala5marklewis.scala51ippsus.scala3forloop
 
 /**
   * scala-project

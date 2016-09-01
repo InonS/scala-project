@@ -1,6 +1,4 @@
-package scala5marklewis.scala51ippsus
-
-import javax.lang.model
+package scala5marklewis.scala51ippsus.scala1matchcase
 
 /**
   * scala-project

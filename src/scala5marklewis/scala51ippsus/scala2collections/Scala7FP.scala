@@ -1,6 +1,7 @@
 package scala5marklewis.scala51ippsus.scala2collections
 
 import scala.Array.fill
+import scala.util.Random
 
 /**
   * scala-project
@@ -20,6 +21,8 @@ object Scala7FP {
     flatMapMethod(a)
 
     reduceAndFoldMethods(a)
+
+    views((Array fill 1000000)(Random nextInt))
   }
 
   def filterMethod(a: Array[Int]): Unit = {
@@ -31,7 +34,6 @@ object Scala7FP {
     println("evens = " + evens.mkString(",") + "   odds = " + odds.mkString(","))
   }
 
-
   private def morePredicateMethods(a: Array[Int]): Unit = {
     println("count evens = " + a count (_ % 2 == 0))
     println("drop less than nine = " + a dropWhile (_ < 9) mkString ",")
@@ -41,19 +43,16 @@ object Scala7FP {
     println("last index where divisible by three = " + a lastIndexWhere (_ % 3 == 0))
   }
 
-
   private def mapMethod(a: Array[Int]): Unit = {
     println(a map (i => i * 2) mkString ", ")
     println(a map (_ / 2.0) mkString ", ")
     println(a map ("hi-" * _) mkString ", ")
   }
 
-
   def flatMapMethod(a: Array[Int]) = {
     println(a map (n => fill(n / 2)(n)) map (_.mkString("(", ",", ")")) mkString ", ")
     println(a flatMap (n => fill(n / 2)(n)) mkString " ,")
   }
-
 
   private def existsMethods(a: Array[Int]): Unit = {
     println(a exists (_ % 5 == 0))
@@ -82,5 +81,18 @@ object Scala7FP {
       println(a + " " + b)
       a + b
     })
+  }
+
+  private def views(a: Array[Int]): Unit = {
+    val start = System.currentTimeMillis()
+    val strict = a map (math pow(_, 2)) filter (_ % 2 == 0) sum
+    val strictEnd = System.currentTimeMillis()
+    val strictMillis = strictEnd - start
+    println("strict: " + strict + " " + strictMillis + " ms")
+
+    val view = a.view map (math pow(_, 2)) filter (_ % 2 == 0) sum
+    val viewMillis = System.currentTimeMillis() - strictEnd
+    println("view: " + view + " " + viewMillis + " ms")
+
   }
 }

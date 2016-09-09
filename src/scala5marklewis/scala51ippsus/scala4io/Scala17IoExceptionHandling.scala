@@ -1,7 +1,7 @@
 package scala5marklewis.scala51ippsus.scala4io
 
-import java.io.{File, FileNotFoundException, IOException}
-import java.nio.file.{InvalidPathException, Path, Paths}
+import java.io.{FileNotFoundException, IOException}
+import java.nio.file.{InvalidPathException, Paths}
 import java.util.NoSuchElementException
 
 import scala.io.Source

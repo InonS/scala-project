@@ -25,7 +25,7 @@ object Scala17IoExceptionHandling {
       try {
         val lines = source getLines
         val totalBabiesWithTopTenNames = lines filter (_ nonEmpty) take k map (_ split "," toList) map (_ last) map (_ toInt) sum;
-        println(s"average number of babies born in 2015 in ${inFileName substring(0, 2)} with a Top %d name: ".format(k) + totalBabiesWithTopTenNames / k)
+        println(s"average number of babies born in 2015 in %s with a Top $k name: ".format(inFileName substring(0, 2)) + totalBabiesWithTopTenNames / k)
       }
       catch {
         case _: NoSuchElementException => println("'next' on empty iterator!")

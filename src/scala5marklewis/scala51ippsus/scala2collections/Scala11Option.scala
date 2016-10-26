@@ -13,7 +13,7 @@ object Scala11Option {
     findGt(lst, 3)
   }
 
-  private def findGt(lst: List[Int], n: Int): Unit = {
+  private def findGt(lst: List[Int], n: Int) {
     val gtn = lst find (_ > n)
     println(gtn)
     println(gtn isEmpty)

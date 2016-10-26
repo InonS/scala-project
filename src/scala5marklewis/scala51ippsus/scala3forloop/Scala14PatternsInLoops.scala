@@ -5,7 +5,7 @@ package scala5marklewis.scala51ippsus.scala3forloop
   * Created by admin on 2016-09-01.
   */
 object Scala14PatternsInLoops {
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) {
     var tuples = List[(Int, Int)]()
     for (i <- 1 to 5) {
       tuples = (i, i + 1) :: tuples

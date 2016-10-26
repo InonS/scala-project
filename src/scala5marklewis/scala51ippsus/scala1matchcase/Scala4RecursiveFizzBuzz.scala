@@ -6,7 +6,7 @@ package scala5marklewis.scala51ippsus.scala1matchcase
   */
 object Scala4RecursiveFizzBuzz {
 
-  def fizzBuzz(n: Int): Unit = {
+  def fizzBuzz(n: Int) {
 
     val isFizz: Boolean = n % 3 == 0
     val isBuzz: Boolean = n % 5 == 0

@@ -20,13 +20,14 @@ object Scala2MatchExpression {
   /**
     * tail recursive procedure with side effects
     */
-  def countDown(n: Int): Unit =
+  def countDown(n: Int) {
     if (n > 0) {
       println(n)
       countDown(n - 1)
     }
+  }
 
-  def matchCasePatternExample(expr: Any, pattern1: Any, pattern2: Any): Unit = {
+  def matchCasePatternExample(expr: Any, pattern1: Any, pattern2: Any) {
 
     println("expression to match = " + expr)
     expr match {
@@ -65,9 +66,11 @@ object Scala2MatchExpression {
     case `n` => n * n + caseSumSquares(n - 1)
   }
 
-  def caseCountDown(n: Int): Unit = n match {
-    case 0 =>
-    case `n` => println(n); caseCountDown(n - 1)
+  def caseCountDown(n: Int) {
+    n match {
+      case 0 =>
+      case `n` => println(n); caseCountDown(n - 1)
+    }
   }
 
   def main(args: Array[String]) {

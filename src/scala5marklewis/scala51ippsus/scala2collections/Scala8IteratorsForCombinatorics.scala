@@ -19,7 +19,7 @@ object Scala8IteratorsForCombinatorics {
     (nums sliding 3).foreach(a => println(a mkString ","))
   }
 
-  private def fiveChooseTwo(nums: Array[Int]): Unit = {
+  private def fiveChooseTwo(nums: Array[Int]) {
     println(nums combinations 2)
 
     val iter: Iterator[Array[Int]] = nums combinations 2

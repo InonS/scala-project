@@ -5,7 +5,7 @@ package scala5marklewis.scala51ippsus.scala3forloop
   * Created by admin on 2016-09-01.
   */
 object Scala16ParallelFor {
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) {
     // sequential
     var x = 0
     for (_ <- 1 to 1000000) x += 1

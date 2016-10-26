@@ -25,7 +25,7 @@ object Scala7FP {
     views((Array fill 1000000)(Random nextInt))
   }
 
-  def filterMethod(a: Array[Int]): Unit = {
+  def filterMethod(a: Array[Int]) {
     println(a filter (_ % 2 == 0) mkString ", ")
     println(a filter (_ % 2 != 1) mkString ", ")
     println(a filterNot (_ % 2 == 1) mkString ", ")
@@ -34,7 +34,7 @@ object Scala7FP {
     println("evens = " + evens.mkString(",") + "   odds = " + odds.mkString(","))
   }
 
-  private def morePredicateMethods(a: Array[Int]): Unit = {
+  private def morePredicateMethods(a: Array[Int]) {
     println("count evens = " + a count (_ % 2 == 0))
     println("drop less than nine = " + a dropWhile (_ < 9) mkString ",")
     println("take less than nine = " + a takeWhile (_ < 9) mkString ",")
@@ -43,7 +43,7 @@ object Scala7FP {
     println("last index where divisible by three = " + a lastIndexWhere (_ % 3 == 0))
   }
 
-  private def mapMethod(a: Array[Int]): Unit = {
+  private def mapMethod(a: Array[Int]) {
     println(a map (i => i * 2) mkString ", ")
     println(a map (_ / 2.0) mkString ", ")
     println(a map ("hi-" * _) mkString ", ")
@@ -54,12 +54,12 @@ object Scala7FP {
     println(a flatMap (n => fill(n / 2)(n)) mkString " ,")
   }
 
-  private def existsMethods(a: Array[Int]): Unit = {
+  private def existsMethods(a: Array[Int]) {
     println(a exists (_ % 5 == 0))
     println(a forall (_ % 5 == 1))
   }
 
-  private def reduceAndFoldMethods(a: Array[Int]): Unit = {
+  private def reduceAndFoldMethods(a: Array[Int]) {
     println(a.reduceLeft((a, b) => {
       println(a + " " + b)
       a + b
@@ -83,7 +83,7 @@ object Scala7FP {
     })
   }
 
-  private def views(a: Array[Int]): Unit = {
+  private def views(a: Array[Int]) {
     val start = System.currentTimeMillis()
     val strict = a map (math pow(_, 2)) filter (_ % 2 == 0) sum
     val strictEnd = System.currentTimeMillis()

@@ -5,7 +5,7 @@ package scala5marklewis.scala51ippsus.scala3forloop
   * Created by admin on 2016-09-01.
   */
 object Scala15Multidimensions {
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) {
     println(multiplicationFactors)
     println(multiplicationTable)
   }

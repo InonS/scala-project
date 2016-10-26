@@ -7,7 +7,7 @@ package scala5marklewis.scala51ippsus.scala1matchcase
 object Scala3MatchCaseOptions {
 
 
-  def matchCasePatternExample(expr: (Int, Int)): Unit = {
+  def matchCasePatternExample(expr: (Int, Int)) {
 
     println("expression to match = " + expr)
     expr match {

@@ -50,7 +50,7 @@ object Scala1ControlFlow {
     }
 
     // no break or continue statements
-    def printPrimes(): Unit = {
+    def printPrimes() {
       val primeList = List(1, 2, 3, 5, 7, 11)
       for (i <- primeList) {
 

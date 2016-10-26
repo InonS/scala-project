@@ -11,7 +11,7 @@ import scala.io.Source
   * Created by admin on 2016-09-09.
   */
 object Scala17IoExceptionHandling {
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) {
 
     val k = 10
     val inFileName: String = "ND.TXT"
@@ -39,7 +39,7 @@ object Scala17IoExceptionHandling {
       case _: InvalidPathException => println("invalid path!")
       case _: FileNotFoundException => println(inFileName + " not found!")
       case _: IOException => println("other I/O exception!")
-      case e => println("an badly unexpected exception has been thrown! " + e)
+      case e: Throwable => println("an badly unexpected exception has been thrown! " + e)
     }
   }
 }

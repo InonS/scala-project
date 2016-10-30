@@ -10,13 +10,13 @@ object Scala1HigherOrderFunc {
 
   def main(args: Array[String]) {
     /**
-      * @param f passed by name: The name of a function returning an [[Int]]. See also the second (i.e. Curryed) parameter [[Array.fill]]
+      * @param f passed by name: The name of a function returning an [[Int]].
+      *          See also the second (i.e. Curryed) parameter [[Array.fill]]
       * @return
       */
     def passByName(f: => Int): Array[Int] = {
       val n = f
-      val arr = Array.fill(n)(f)
-      arr
+      Array.fill(n)(f)
     }
     println(passByName(Random.nextInt(1 << 5)).toStream mkString ", ")
   }

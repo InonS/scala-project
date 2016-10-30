@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala5case
+package scala5marklewis.scala51ippsus.scala515case
 
 /**
   * scala-project

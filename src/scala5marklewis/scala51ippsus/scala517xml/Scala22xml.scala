@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala7xml
+package scala5marklewis.scala51ippsus.scala517xml
 
 import scala.collection.immutable.Seq
 import scala.xml.{Elem, Node, NodeSeq, XML}

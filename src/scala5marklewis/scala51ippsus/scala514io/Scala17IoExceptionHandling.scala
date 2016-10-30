@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala4io
+package scala5marklewis.scala51ippsus.scala514io
 
 import java.io.{FileNotFoundException, IOException}
 import java.nio.file.{InvalidPathException, Paths}

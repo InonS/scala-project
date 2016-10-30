@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala1matchcase
+package scala5marklewis.scala51ippsus.scala511matchcase
 
 /**
   * scala-project

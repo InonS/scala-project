@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala6sorting
+package scala5marklewis.scala51ippsus.scala516sorting
 
 /**
   * scala-project

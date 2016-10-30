@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala2collections
+package scala5marklewis.scala51ippsus.scala512collections
 
 import scala.Array.fill
 import scala.util.Random

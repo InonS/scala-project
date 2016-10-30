@@ -1,4 +1,4 @@
-package scala5marklewis.scala51ippsus.scala2collections
+package scala5marklewis.scala51ippsus.scala512collections
 
 import scala.reflect.io.File.separator
 

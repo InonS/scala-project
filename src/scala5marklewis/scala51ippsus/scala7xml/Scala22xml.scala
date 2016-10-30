@@ -51,19 +51,25 @@ object Scala22xml {
 
   case class Exam(grade: GradeAndComment)
 
-  case class Student(fname: String, lname: String, quizzes: List[Quiz], assignments: List[Assignment], exams: List[Exam])
+  case class Student(fname: String, lname: String, quizzes: List[Quiz], assignments: List[Assignment],
+                     var exams: List[Exam])
 
   object StudentA {
     def unapply(node: Node): Student = {
       val fname: String = xSearchGetTextNode(node, "fname", isAttribute = true)
       val lname: String = xSearchGetTextNode(node, "lname", isAttribute = true)
-      val quizNodes = node \ "quizzes"
+      val quizNodes = node \ "quizzes" \\ "quiz"
+      println(quizNodes.toStream mkString ", ")
       val quizzesSeq: Seq[Quiz] = quizNodes map QuizA.unapply
       val quizzes: List[Quiz] = quizzesSeq.toList
-      val assignmentNodes = node \ "assignments"
-      val assignments: List[Assignment] = AssignmentA.unapplySeq(assignmentNodes)
-      val examNodes = node \ "exams"
-      val exams: List[Exam] = ExamA.unapplySeq(examNodes)
+      val assignmentNodes = node \ "assignments" \\ "assignment"
+      println(assignmentNodes.toStream mkString ", ")
+      val assignmentSeq = assignmentNodes map AssignmentA.unapply
+      val assignments = assignmentSeq.toList
+      val examNodes = node \ "exams" \\ "exam"
+      println(examNodes.toStream mkString ", ")
+      val examSeq = examNodes map ExamA.unapply
+      val exams = examSeq.toList
       Student(fname, lname, quizzes, assignments, exams)
     }
 
@@ -102,6 +108,10 @@ object Scala22xml {
   }
 
   object AssignmentA {
+    def unapply(node: Node): Assignment = {
+      Assignment(GradeAndCommentA.unapply(node))
+    }
+
     def unapplySeq(nodes: NodeSeq): List[Assignment] = (nodes map GradeAndCommentA.unapply map Assignment).toList
 
     def apply(assignment: Assignment): Node = {
@@ -112,6 +122,10 @@ object Scala22xml {
   }
 
   object ExamA {
+    def unapply(node: Node): Exam = {
+      Exam(GradeAndCommentA.unapply(node))
+    }
+
     def unapplySeq(nodes: NodeSeq): List[Exam] = (nodes map GradeAndCommentA.unapply map Exam).toList
 
     def apply(exam: Exam): Node = {
@@ -140,7 +154,11 @@ object Scala22xml {
     val elem: Elem = xmlLoadFile()
     val courseName = xSearch(elem)
     val students = deserialize(elem)
-    students.foreach(Exam(GradeAndComment((math.random * 100).toInt, "new exam")) :: _.exams)
+    def appendNewRandomExam(student: Student) {
+      val newRandomExam = Exam(GradeAndComment((math.random * 100).toInt, "new exam"))
+      student.exams = student.exams :+ newRandomExam
+    }
+    students.foreach(appendNewRandomExam)
     serialize(elem, courseName, students)
   }
 

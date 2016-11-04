@@ -1,7 +1,7 @@
-package scala5marklewis.scala53ooadsus.scala531oo
+package scala5marklewis.scala53ooadsus.scala531ooAndSpecialMethods
 
 import scala.collection.immutable.NumericRange
-import scala5marklewis.scala53ooadsus.scala531oo.Scala5312MutabilityAndPrivateMembers.ImmutableObject
+import scala5marklewis.scala53ooadsus.scala531ooAndSpecialMethods.Scala5312MutabilityAndPrivateMembers.ImmutableObject
 
 /**
   * scala-project

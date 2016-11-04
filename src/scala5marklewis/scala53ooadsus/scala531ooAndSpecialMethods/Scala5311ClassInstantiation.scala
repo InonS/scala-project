@@ -1,4 +1,4 @@
-package scala5marklewis.scala53ooadsus.scala531oo
+package scala5marklewis.scala53ooadsus.scala531ooAndSpecialMethods
 
 /**
   * scala-project
@@ -15,6 +15,13 @@ object Scala5311ClassInstantiation {
   class Person(context: String, val name: String, var age: Int = 18) {
 
     var hasAged = false
+
+    /** non-default ctor.
+      * must invoke the default one
+      */
+    def this(context: String) {
+      this(context, "noname")
+    }
 
     /**
       * Convention: Use parameter parenthesis for a method with side-effects.

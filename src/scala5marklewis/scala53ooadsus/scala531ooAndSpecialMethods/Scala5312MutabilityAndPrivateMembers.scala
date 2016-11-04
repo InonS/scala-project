@@ -1,4 +1,4 @@
-package scala5marklewis.scala53ooadsus.scala531oo
+package scala5marklewis.scala53ooadsus.scala531ooAndSpecialMethods
 
 /**
   * scala-project

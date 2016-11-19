@@ -40,7 +40,9 @@ object Scala5312MutabilityAndPrivateMembers {
     def f = _f
 
     /** property assignment method */
-    def f_=(new_f: List[Int]) = f = new_f
+    def f_=(new_f: List[Int]) {
+      f = new_f
+    }
 
     /**
       * unary, prefix operator

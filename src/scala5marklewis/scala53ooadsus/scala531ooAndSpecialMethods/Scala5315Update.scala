@@ -25,7 +25,7 @@ object Scala5315Update {
     class UpdateableMutableForce(var g: List[Int]) extends MutableForce(g: List[Int]) {
       def update(index: Int, value: Int) {
         index match {
-          case n: Int if n > 0 && n < g.length => g = g.updated(index) = value
+          case n: Int if n > 0 && n < g.length => g = g.updated(index, value)
           case _ => throw new IndexOutOfBoundsException(s"${this.getClass.getName} indexed at $index")
         }
       }

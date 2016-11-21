@@ -4,7 +4,7 @@ package scala5marklewis.scala53ooadsus.scala533polymorphism
   * scala-project
   * Created by admin on 2016-11-20.
   */
-object Scala53334FunctionalInheritance {
+object Scala5334FunctionalInheritance {
 
   /**
     * Functional object (callable), but does not implement functional interface, so can't be used just everywhere one of those is expected

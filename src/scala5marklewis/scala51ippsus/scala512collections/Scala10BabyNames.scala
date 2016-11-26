@@ -39,7 +39,7 @@ object Scala10BabyNames {
     nameLines map parseLine
     */
 
-    val fileName: String = "rsc" + separator + "ND.txt"
+    val fileName: String = "rsc" + separator + "State" + separator + "ND.txt"
     val source = io.Source.fromFile(fileName)
     source getLines() map parseLine
   }

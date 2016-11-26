@@ -18,7 +18,7 @@ object Scala17IoExceptionHandling {
 
     /** try getting resource */
     try {
-      val inFile = Paths get("rsc", inFileName) toFile
+      val inFile = Paths get("rsc", "State", inFileName) toFile
       val source = Source fromFile inFile
 
       /** try-with-resource: 'source' */

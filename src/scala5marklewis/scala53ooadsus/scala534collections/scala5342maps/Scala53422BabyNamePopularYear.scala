@@ -23,7 +23,7 @@ object Scala53422BabyNamePopularYear extends App {
       def apply(state: String, gender: Char, year: Int, name: String, count: Int): Option[StateRecord] = {
         try {
           validate(state, gender, year, name, count)
-          if (!fltr(state, gender, year, name, count)) return None
+          if (!fltr(state, gender, year, name, count)) return None // TODO replace by using groupedBy to allow dynamic queries by name
           Some(new StateRecord(state, gender == 'M', year, name, count))
         } catch {
           case t: Throwable => println((state, gender, year, name, count, t)); None

@@ -126,18 +126,22 @@ object Scala53422BabyNamePopularYear extends App {
 
       println(records(0).stateRecordsByName)
 
-      var chosenName = ""
-      while (chosenName != "quit") {
-        chosenName = StdIn readLine "select name:"
-        println("top year by state:")
-        try {
-          val maybeStateRecordses = records.map(_ stateRecordsByName).map(_ get chosenName)
-          val topStateRecords = maybeStateRecordses.filterNot(_ isEmpty).map(_ get).map(s => s.maxBy(_ count)).map(r => s"${r.state}, ${r.year}, ${r.count}")
-          println(topStateRecords.mkString("\n"))
-        } catch {
-          case t: Throwable => println(t)
+      def topStateRecordsByChosenName() {
+        var chosenName = ""
+        while (chosenName != "quit") {
+          chosenName = StdIn readLine "select name:"
+          println("top year by state:")
+          try {
+            val maybeStateRecordses = records.map(_ stateRecordsByName).map(_ get chosenName)
+            val topStateRecords = maybeStateRecordses.filterNot(_ isEmpty).map(_ get).map(s => s.maxBy(_ count)).map(r => s"${r.state}, ${r.year}, ${r.count}")
+            println(topStateRecords.mkString("\n"))
+          } catch {
+            case t: Throwable => println(t)
+          }
         }
       }
+
+      topStateRecordsByChosenName()
     }
 
     def namesFromFile[R <: YearCountRecord with NameRecord](f: File, o: YearCountRecordCompanion[R], fieldsExtractor: R => (Int, Int)): Try[Map[String, Set[R]]] = {
